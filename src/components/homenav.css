@@ -1,0 +1,44 @@
+
+.mycontainer{
+    position: relative;
+    min-width : 100 vw;
+    height:5rem;
+    background-color: #ff5454;
+    display: flex;
+    align-items: center;
+}
+
+.navelmt{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+.navdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+}
+
+.contents{
+    width:50%;
+    display:flex;
+    justify-content: space-around;
+}
+
+.navsearch{
+    background-color: #ff5454;
+    width:20%;
+    height: 30%;
+    color:rgb(0, 0, 0);
+    position: absolute; 
+    right:1rem;
+    display: flex;
+    align-items: center;
+}
+
+.input-field{
+    background-color: #4b4b4b;
+    border-radius: 10px;
+}
