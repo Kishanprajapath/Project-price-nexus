@@ -25,7 +25,7 @@ export default function Card({ title, img, desc, price, url }) {
           </div>
           <span className="card-title grey-text text-darken-4">
             <a class="waves-effect waves-light  btn-medium">
-              <i className="material-icons left" style={{margin : "0"}}>attach_money</i>
+              <i className="fa-solid fa-indian-rupee-sign" style={{marginRight : "2px"}}></i>
               {price}
             </a>
             <i className="material-icons right">close</i>

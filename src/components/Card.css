@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
 }
+.card {
+    max-width: 300px;
+}
 .card-title {
     
     /* height: 3rem; */

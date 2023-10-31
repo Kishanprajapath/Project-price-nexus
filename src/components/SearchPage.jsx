@@ -4,9 +4,10 @@ import useFetchData from "../hooks/useFetchData";
 import parseMyntra from "../utils/parseMyntra";
 import { useState } from "react";
 import Loading from "./Loading";
-export default function SearchPage() {
+export default function SearchPage({}) {
   const { data, loading, reFetch } = useFetchData();
   const [val, setval] = useState("");
+
 
   const handleMyntra = (data) => {
     if(data.length === 0) return (<h1>No Results Found</h1>);
@@ -16,7 +17,7 @@ export default function SearchPage() {
         <Card
           img={item["image"]}
           price={item["price"]}
-          name={item["name"]}
+          title={item["name"]}
           url={item["url"]}
         />
       );
