@@ -41,14 +41,28 @@
 
 .input-field{
     /* background-color: #4b4b4b; */
-
-    border-radius: 0px 10px 10px 0px;
+    /* height: 0% !important; */
     box-shadow: none;
+}
+form {
+    margin-bottom: 0rem !important;
+    background-color: #4b4b4b;
 }
 
 .search-inp {
+    color: white ;
     padding: 0.5rem !important;
     font-size: 2rem !important;
+}
+.search-inp:focus {
+    color : #4b4b4b !important
+}
+
+@media (max-width: 1000px) {
+    .shopnavsearch {
+        width: 50%;
+    }
+
 }
 
 #ShopPNlogo{

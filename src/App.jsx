@@ -7,19 +7,16 @@ import { Component } from "react";
 import Selectshopsite from "./components/shopselect";
 import Background from "./components/Shop_Background";
 import { useEffect } from "react";
+import SearchPage from "./components/SearchPage";
 
   function App() {
-  useEffect(() => {
-    
-  }, []);
+  
   return (
     <div className="App">
       <Background />
-        <Shopnav />
-      <div id="scrollable">
-        <Shopcontents />
-        <Selectshopsite />
-      </div>
+      
+       
+      <SearchPage/>
     </div>
   );
 }

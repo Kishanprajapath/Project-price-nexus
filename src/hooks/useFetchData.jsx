@@ -27,7 +27,7 @@ const useFetchData = () => {
 
   useEffect(() => {
     fetchData();
-  }, [search]);
+  }, [refetch]);
 
   return {
     setsearch,

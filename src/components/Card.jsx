@@ -3,10 +3,10 @@ import im from "./images/bajaj.png";
 import "./Card.css";
 export default function Card({ title, img, desc, price, url }) {
   return (
-    <div className="row">
-      <div className="col s3 card small hoverable">
+    <div className="">
+      <div className=" card large hoverable ">
         <div className="card-image waves-effect waves-block waves-light">
-          <img className="activator card-img" height={150} src={img} />
+          <img className="activator card-img" height={400} src={img} />
         </div>
         <div className="card-content">
           <span className="card-title  grey-text text-darken-4">{title}</span>
@@ -15,11 +15,16 @@ export default function Card({ title, img, desc, price, url }) {
               Buy Now
             </a>{" "}
             <i className="activator material-icons right">more_vert</i>
+            
           </p>
+          <a class="waves-effect waves-light" style={{fontSize : "2rem" , marginTop : "0.2rem"}}>
+              <i className="fa-solid fa-indian-rupee-sign" style={{marginRight : "2px"}}></i>
+              {price}
+            </a>
         </div>
         <div className="card-reveal">
           <div class="card-action">
-            <a className="waves-effect waves-light btn light-blue" href={url}>
+            <a className="waves-effect waves-light btn light-blue " href={url}>
               Buy Now
             </a>
           </div>
