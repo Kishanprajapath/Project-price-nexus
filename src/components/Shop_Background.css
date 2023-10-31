@@ -1,0 +1,9 @@
+.backgrdimg{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./images/login.jpg);
+    background-repeat:no-repeat;
+    background-size: 100%;
+    position: fixed;
+    z-index: -1;
+}

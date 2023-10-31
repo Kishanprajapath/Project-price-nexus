@@ -1,0 +1,22 @@
+.shopcontent-container{
+    display: flex;
+    background-color: #4b4b4b;
+    height:3rem;
+    justify-content: space-around;
+}
+
+#shop_comp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4b4b4b;
+    color:#e0e0e0;
+    height: 100%;
+    width: 25% !important;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+#shop_comp:hover{
+    font-size: 1.4rem;
+}
