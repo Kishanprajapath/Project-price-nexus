@@ -1,0 +1,105 @@
+.container-foot {
+    max-width: 1170px;
+    margin: auto;
+  }
+  .row-foot {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul {
+    list-style: none;
+  }
+  .footer {
+    background-color: #333;
+    padding: 20px 0;
+    position: relative;
+    text-align: left; /* Align the content to the right */
+  }
+  .footer-col {
+    flex: 1;
+    padding: 0 15px;
+  }
+  .footer-col h4 {
+    font-size: 16px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: transparent;
+    height: 2px;
+    box-sizing: border-box;
+    width: 40px;
+  }
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover {
+    color: #e91e63;
+  }
+  .social-links {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: px;
+  }
+  .social-links a {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-color: #e91e63;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+  }
+  .social-links a:hover {
+    color: #e91e63;
+    background-color: #fff;
+  }
+  .copyright {
+    color: #fff;
+  }
+  /* Positioning for the logo */
+  .logo {
+    text-align: right;
+    padding: 10px;
+  }
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  @media (max-width: 767px) {
+    .footer-col {
+      flex: 50%;
+      padding: 10px 15px;
+      text-align: center;
+      justify-content: center;
+    }
+    .footer-col h4::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  @media (max-width: 574px) {
+    .footer-col {
+      flex: 100%;
+    }
+  }

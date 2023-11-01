@@ -8,6 +8,7 @@ import Selectshopsite from "./components/shopselect";
 import Background from "./components/Shop_Background";
 import { useEffect } from "react";
 import SearchPage from "./components/SearchPage";
+import Footer from "./components/footer";
 
   function App() {
   
@@ -17,6 +18,7 @@ import SearchPage from "./components/SearchPage";
       
        
       <SearchPage/>
+      <Footer/>
     </div>
   );
 }

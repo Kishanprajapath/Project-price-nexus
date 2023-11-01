@@ -9,7 +9,7 @@ function Selectshopsite({val , reFetch}) {
     let btns = document.querySelectorAll(`.${_CLASS}`);
     // add class active to the button that is clicked
     
-
+    
     btns.forEach((btn) => {
         btn.addEventListener("click", function () {
             btns.forEach((btn) => btn.classList.remove("b-active"));
