@@ -1,13 +1,13 @@
 import React from "react";
 import "./shopselect.css";
 
-function Selectshopsite() {
+function Selectshopsite({val , reFetch}) {
   return (
     <div className="shopselect-container">
-      <a id="shopsel-but" className="btn waves-effect waves-light btn-large b-active">
+      <a id="shopsel-but" onClick={() => reFetch(val,"flipkart")} className="btn waves-effect waves-light btn-large b-active">
         Flipkart
       </a>
-      <a id="shopsel-but1" className="btn waves-effect waves-light btn-large">
+      <a id="shopsel-but1" onClick={() => reFetch(val,"myntra")} className="btn waves-effect waves-light btn-large">
         Myntra
       </a>
       <a id="shopsel-but2" className="btn waves-effect waves-light btn-large">

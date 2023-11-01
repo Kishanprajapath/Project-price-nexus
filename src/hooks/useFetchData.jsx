@@ -8,10 +8,13 @@ const useFetchData = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [refetch,setrefetch] = useState(0);
+  const [selectval , setselectval] = useState("myntra");
+
   const fetchData = async () => {
     try {
       if(search === "") return;
-      const { data: response } = await axios.get('http://localhost:8000/myntra/' + search + '/');
+      
+      const { data: response } = await axios.get('http://localhost:8000/'+selectval + '/' + search.replace(" ","_") + '/');
       setData(response);
     } catch (error) {
       console.error(error)
@@ -19,8 +22,9 @@ const useFetchData = () => {
     setLoading(false);
   };
 
-  const reFetch = (sea) => {
+  const reFetch = (sea,val) => {
     setLoading(true);
+    setselectval(val);
     setsearch(sea);
     return setrefetch(refetch+1);
   }
@@ -33,7 +37,9 @@ const useFetchData = () => {
     setsearch,
     data,
     loading,
-    reFetch
+    reFetch,
+    selectval,
+    setselectval
   };
 };
 

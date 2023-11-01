@@ -4,7 +4,7 @@ import "./Card.css";
 export default function Card({ title, img, desc, price, url }) {
   return (
     <div className="">
-      <div className=" card large hoverable ">
+      <div className=" card  hoverable ">
         <div className="card-image waves-effect waves-block waves-light">
           <img className="activator card-img" height={400} src={img} />
         </div>
@@ -23,11 +23,7 @@ export default function Card({ title, img, desc, price, url }) {
             </a>
         </div>
         <div className="card-reveal">
-          <div class="card-action">
-            <a className="waves-effect waves-light btn light-blue " href={url}>
-              Buy Now
-            </a>
-          </div>
+          
           <span className="card-title grey-text text-darken-4">
             <a class="waves-effect waves-light  btn-medium">
               <i className="fa-solid fa-indian-rupee-sign" style={{marginRight : "2px"}}></i>
@@ -37,6 +33,11 @@ export default function Card({ title, img, desc, price, url }) {
           </span>
           <br />
           <p>{title}</p>
+          <div class="card-action bottom">
+            <a className="waves-effect waves-light btn light-blue " href={url}>
+              Buy Now
+            </a>
+          </div>
         </div>
       </div>
     </div>

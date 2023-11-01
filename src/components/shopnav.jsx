@@ -5,7 +5,7 @@ import namelogo from "./images/nameLogo.png";
 import { useState } from "react";
 import M from "materialize-css/dist/js/materialize.min.js";
 
-function Shopnav({ val, setval, reFetch }) {
+function Shopnav({ val, setval, reFetch , selectval }) {
   useEffect(() => {
     // use materialize js dropdown
     var elems = document.querySelectorAll(".dropdown-trigger");
@@ -23,12 +23,12 @@ function Shopnav({ val, setval, reFetch }) {
           <img id="shopname-logo" src={namelogo} alt="Name"></img>
         </div>
         <div className="shopnavalign">
-          <div className="categories dropdown-trigger" data-target="cat_drop">
+          {/* <div className="categories dropdown-trigger" data-target="cat_drop">
             <p id="shopdropdowntext">All</p>
             <i id="shopdropdown" class="material-icons">
               keyboard_arrow_down
             </i>
-          </div>
+          </div> */}
           <ul id="cat_drop" class="dropdown-content">
             <li>
               <a href="#!">one</a>
@@ -58,7 +58,7 @@ function Shopnav({ val, setval, reFetch }) {
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
-                    reFetch(val);
+                    reFetch(val, selectval);
                   }}
                 >
                   <div className="input-field">

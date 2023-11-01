@@ -51,8 +51,9 @@ form {
 
 .search-inp {
     color: white ;
-    padding: 0.5rem !important;
-    font-size: 2rem !important;
+    padding: 1.5rem !important;
+    /* text-align: center; */
+    font-size: 1.5rem !important;
 }
 .search-inp:focus {
     color : #4b4b4b !important

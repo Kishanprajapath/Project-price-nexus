@@ -8,13 +8,20 @@ import Shopnav from "./shopnav";
 import Shopcontents from "./shopcontents";
 import Selectshopsite from "./shopselect";
 export default function SearchPage() {
-  const { data, loading, reFetch } = useFetchData();
+  const { data, loading, reFetch , selectval , setselectval } = useFetchData();
   const [val, setval] = useState("");
-
   const handleMyntra = (data) => {
     
-    if (data.length === 0) return <div className="h1">No Results Found</div>;
-    const parsedData = parseMyntra(data);
+    if (data.length === 0) return <div className="h1"></div>;
+    // const parsedData = parseMyntra(data);
+    let parsedData = data;
+    if(selectval === "myntra") {parsedData = parseMyntra(data); }
+
+    if(selectval == "flipkart") {
+      parsedData = JSON.parse(data)
+      parsedData = parsedData['products']
+      };
+    console.log(parsedData);
     return parsedData.map((item) => {
       return (
         <Card
@@ -29,10 +36,10 @@ export default function SearchPage() {
 
   return (
     <div>
-      <Shopnav val={val} setval={setval} reFetch={reFetch} />
+      <Shopnav val={val} setval={setval} reFetch={reFetch} selectval={selectval} />
       <div id="scrollable">
-        <Shopcontents />
-        <Selectshopsite />
+        {/* <Shopcontents /> */}
+        <Selectshopsite val={val} reFetch={reFetch} />
       </div>
       <div
         style={{
